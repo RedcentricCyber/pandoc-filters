@@ -66,7 +66,7 @@ It requires the [soul](https://ctan.org/pkg/soul) package for highlighting.
 It requires pandoc to be called with the [listings](https://pandoc.org/MANUAL.html#option--listings[) option.
 
 It also requires listings to be set with escapeinside specified in lstset. The
-below is will be in the latex template used by pandoc.
+below should be in the latex template used by pandoc.
 
 ```
 \lstset{
@@ -99,6 +99,9 @@ And it expects the following latex macros to be defined:
 def login(username, password):
     hard_coded_username = "user123"
     {MEDIUM}hard_coded_password = "{REDACTED}"{/MEDIUM}
+    {CODECOMMENT: Hard Coded Credentials}
+Something about why *hard coded* credentails are bad
+    {/CODECOMMENT}
 
     if username == hard_coded_username and password == hard_coded_password:
         return True
@@ -109,7 +112,6 @@ def login(username, password):
 ````
 
 ![](./images/2025-06-13-11-17-42.png)
-
 
 This shows how code can be highlighted. In this example, `{MEDIUM}` is used. It
 is possible to use any of the following:
