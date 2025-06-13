@@ -1,4 +1,4 @@
-local ordered_table = require('ordered_table')
+local ordered_table = require('ordered_table') -- https://itecnote.com/tecnote/lua-in-pairs-with-same-order-as-its-written/
 local utils = require('includes/rcUtils')
 local rctables = require('includes/rcTables')
 
