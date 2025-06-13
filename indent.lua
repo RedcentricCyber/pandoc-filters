@@ -1,5 +1,5 @@
 #!/usr/bin/env lua
-local utils = require('includes/rcUtils.lua')
+local utils = require('includes/rcUtils')
 
 function Div(el)
 	if utils.contains(el.attr.classes, "indent") then
