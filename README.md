@@ -127,3 +127,52 @@ The `{REDACTED}` or `{SNIP}` shortcodes insert the `\codeSnip` or
 
 The multi-line `{CODECOMMENT}` shortcode adds a centred "notes" box to the code
 block which can be useful for annotating code.
+
+## YAML Tables
+
+For the most part, we really like markdown. However, we don't like markdown
+tables. Any of them. So, what did we do? Make yet another way of doing them.
+
+
+![](https://imgs.xkcd.com/comics/standards.png)
+
+In the most basic form, they look like this:
+
+````
+
+```table
+- Column 1: row1col1
+  Column 2: row1col2
+  Column 3: row1col3
+- Column 1: row2col1
+  Column 3: row2col3
+  Column 2: row2col2
+```
+````
+
+![](./images/2025-06-13-14-15-26.png)
+
+However, they are a fair few more options, so documentation for that is
+[here](docs/yaml-tables.md).
+
+
+## CSV Tables
+
+It is also possible to include a CSV or TSV file as a table. You do this using
+the normal markdown image syntax:
+
+For instance,
+
+```markdown
+![Caption](path/to/file.csv)
+```
+
+This will include a csv file as a table. The first row will be used as the table
+header. A caption is optional.
+
+It is noteworthy that the same options (except transpose) that are available for
+yaml tables, are available for csv tables. For example:
+
+```markdown
+![Caption](path/to/file.csv){align=XYZ}
+```
