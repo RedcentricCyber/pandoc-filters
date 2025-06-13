@@ -68,6 +68,12 @@ It requires pandoc to be called with the [listings](https://pandoc.org/MANUAL.ht
 It also requires listings to be set with escapeinside specified in lstset. The
 below should be in the latex template used by pandoc.
 
+```
+\lstset{
+	escapeinside={\#(}{\#)},
+	breaklines=true,
+}
+```
 
 It expects a number of latex colours to be set using the
 [xcolor](https://ctan.org/pkg/xcolor) package:
