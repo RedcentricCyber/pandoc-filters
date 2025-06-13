@@ -37,7 +37,8 @@ Normal markdown will work as the contents.
 ## Indent
 
 The indent filter does as it says on the tin. It indents the contents. It can be
-nested if you want.
+nested if you want. It requires the
+[changepage](https://ctan.org/pkg/changepage) package.
 
 ```
 This is a normal paragraph
