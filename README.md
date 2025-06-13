@@ -68,12 +68,6 @@ It requires pandoc to be called with the [listings](https://pandoc.org/MANUAL.ht
 It also requires listings to be set with escapeinside specified in lstset. The
 below should be in the latex template used by pandoc.
 
-```
-\lstset{
-	escapeinside={\#(}{\#)},
-	breaklines=true,
-}
-```
 
 It expects a number of latex colours to be set using the
 [xcolor](https://ctan.org/pkg/xcolor) package:
@@ -94,26 +88,21 @@ And it expects the following latex macros to be defined:
 \newcommand{\codeRedacted}{\textit{\textbf{\textcolor{RCblue}{--REDACTED--}}}}
 ```
 
-````
 ```
-def login(username, password):
-    hard_coded_username = "user123"
-    {MEDIUM}hard_coded_password = "{REDACTED}"{/MEDIUM}
-    {CODECOMMENT: Hard Coded Credentials}
-Something about why *hard coded* credentails are bad
-    {/CODECOMMENT}
+# Example Heading 1
 
-    if username == hard_coded_username and password == hard_coded_password:
-        return True
-    else:
-        return False
+## Example Heading 2
 
+{CODECOMMENT: Headings}
+Markdown supports up to h6
+{/CODECOMMENT}
+
+![{YELLOW}A Caption{/YELLOW}](path/to/image.jpg)
 ```
-````
 
 ![](./images/2025-06-13-11-17-42.png)
 
-This shows how code can be highlighted. In this example, `{MEDIUM}` is used. It
+This shows how code can be highlighted. In this example, `{YELLOW}` is used. It
 is possible to use any of the following:
 
 * CRITICAL
