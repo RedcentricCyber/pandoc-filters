@@ -176,3 +176,10 @@ yaml tables, are available for csv tables. For example:
 ```markdown
 ![Caption](path/to/file.csv){align=XYZ}
 ```
+
+## Only Headers
+
+This one is a bit different. You probably don't want this for the main
+generation of a document, but it is a useful helper at times to pull out headers
+to get an idea of the outline of a document.
+
